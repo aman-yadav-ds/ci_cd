@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+
+    <title>Circel-CI Prediction App</title>
+</head>
+<body>
+    <h2>Circel-CI Prediction App</h2>
+    <div>
+        <form method="post">
+            <label for="SepalLengthCm">SepalLengthCm</label>
+            <input type="number" step="any" name="SepalLengthCm", required>
+            <label for="SepalWidthCm">SepalWidthCm</label>
+            <input type="number" step="any" name="SepalWidthCm", required>
+            <label for="PetalLengthCm">PetalLengthCm</label>
+            <input type="number" step="any" name="PetalLengthCm", required>
+            <label for="PetalWidthCm">PetalWidthCm</label>
+            <input type="number" step="any" name="PetalWidthCm", required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+    <div>
+    {% if prediction is not none %}
+        <h3>Species: {{ prediction }}</h3>
+    {% endif %}
+    </div>
+</body>
+</html>

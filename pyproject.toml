@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CI_CD_TESTING"
+version = "0.1"
+authors = [
+    { name = "Aman "}
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "Flask",
+    "joblib",
+    "matplotlib",
+    "seaborn"
+]
+
+[tool.setuptools.packages.find]
+where=["."]
